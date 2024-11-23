@@ -1,0 +1,11 @@
+Task,,Created,Assign,Status,Project
+Implement User Authentication,Develop and integrate a user authentication system using OAuth 2.0 to ensure secure access to the application.,20/11/2024,Netanel,Hold,A
+Design Landing Page,"Create a visually appealing and user-friendly landing page for the new marketing campaign, including graphics and layout.",21/11/2024,Dani,Hold,B
+Optimize Database Queries,Analyze and optimize SQL queries to improve database performance and reduce load times.,20/11/2024,Roy,In Progress,B
+Conduct User Testing,Organize and conduct user testing sessions to gather feedback on the new feature and identify areas for improvement.,24/11/2024,Tal,In Progress,A
+Update API Documentation,Revise and update the API documentation to reflect recent changes and ensure it is clear and comprehensive for developers.,18/10/2024,Aviv,Done,C
+Fix Login Bug,"Investigate and resolve the issue causing login failures for certain users, ensuring a smooth login experience.",20/11/2024,Gil,In Progress,A
+Implement Dark Mode,"Develop and integrate a dark mode option for the application, allowing users to switch between light and dark themes.",18/10/2024,Dani,Done,C
+Set Up CI/CD Pipeline,Configure and implement a continuous integration and continuous deployment (CI/CD) pipeline to automate the build and deployment process.,24/11/2024,Netanel,Review,C
+Create Marketing Materials,"Design and produce marketing materials, including brochures, flyers, and social media graphics, for the upcoming product launch.",24/11/2024,Tal,Review,B
+Conduct Security Audit,Perform a comprehensive security audit of the application to identify vulnerabilities and recommend improvements.,20/11/2024,Netanel,In Progress,A
