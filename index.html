@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Application</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .task, .knowledge { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+        .task h3, .knowledge h3 { margin: 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Management Application</h1>
+        <div>
+            <h2>Tasks</h2>
+            <div id="tasks"></div>
+            <h3>Add Task</h3>
+            <input type="text" id="taskTitle" placeholder="Title">
+            <input type="text" id="taskDescription" placeholder="Description">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <div>
+            <h2>Knowledge Base</h2>
+            <div id="knowledge"></div>
+            <h3>Add Knowledge Base Entry</h3>
+            <input type="text" id="knowledgeTitle" placeholder="Title">
+            <textarea id="knowledgeContent" placeholder="Content"></textarea>
+            <button onclick="addKnowledge()">Add Entry</button>
+        </div>
+    </div>
+    <script>
+        async function fetchTasks() {
+            const response = await fetch('/tasks');
+            const tasks = await response.json();
+            const tasksDiv = document.getElementById('tasks');
+            tasksDiv.innerHTML = '';
+            tasks.forEach(task => {
+                const taskDiv = document.createElement('div');
+                taskDiv.className = 'task';
+                taskDiv.innerHTML = `<h3>${task.title}</h3><p>${task.description}</p><p>Status: ${task.status}</p>`;
+                tasksDiv.appendChild(taskDiv);
+            });
+        }
+
+        async function addTask() {
+            const title = document.getElementById('taskTitle').value;
+            const description = document.getElementById('taskDescription').value;
+            await fetch('/tasks', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title, description })
+            });
+            fetchTasks();
+        }
+
+        async function fetchKnowledge() {
+            const response = await fetch('/knowledge');
+            const knowledge = await response.json();
+            const knowledgeDiv = document.getElementById('knowledge');
+            knowledgeDiv.innerHTML = '';
+            knowledge.forEach(entry => {
+                const entryDiv = document.createElement('div');
+                entryDiv.className = 'knowledge';
+                entryDiv.innerHTML = `<h3>${entry.title}</h3><p>${entry.content}</p>`;
+                knowledgeDiv.appendChild(entryDiv);
+            });
+        }
+
+        async function addKnowledge() {
+            const title = document.getElementById('knowledgeTitle').value;
+            const content = document.getElementById('knowledgeContent').value;
+            await fetch('/knowledge', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title, content })
+            });
+            fetchKnowledge();
+        }
+
+        fetchTasks();
+        fetchKnowledge();
+    </script>
+</body>
+</html>
