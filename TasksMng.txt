@@ -1,4 +1,4 @@
-Task,,Created,Assign,Status,Project
+Task,Created,Assign,Status,Project
 Implement User Authentication,Develop and integrate a user authentication system using OAuth 2.0 to ensure secure access to the application.,20/11/2024,Netanel,Hold,A
 Design Landing Page,"Create a visually appealing and user-friendly landing page for the new marketing campaign, including graphics and layout.",21/11/2024,Dani,Hold,B
 Optimize Database Queries,Analyze and optimize SQL queries to improve database performance and reduce load times.,20/11/2024,Roy,In Progress,B
