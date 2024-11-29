@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Weather App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        input[type="text"], button, select { padding: 10px; margin: 5px; font-size: 16px; }
+        .weather { margin-top: 20px; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enhanced Weather App</h1>
+        <form method="POST" action="/get_weather">
+            <input type="text" name="city" placeholder="Enter city name">
+            <br>
+            <label for="unit">Temperature Unit:</label>
+            <select name="unit" id="unit">
+                <option value="metric" {% if unit == "metric" %}selected{% endif %}>Celsius (°C)</option>
+                <option value="imperial" {% if unit == "imperial" %}selected{% endif %}>Fahrenheit (°F)</option>
+            </select>
+            <br>
+            <button type="submit">Get Weather</button>
+        </form>
+        
+        <h3>Quick Access:</h3>
+        <form method="POST" action="/get_weather">
+            <input type="hidden" name="unit" value="{{ unit }}">
+            <button type="submit" name="city" value="New York">New York</button>
+            <button type="submit" name="city" value="London">London</button>
+            <button type="submit" name="city" value="Tokyo">Tokyo</button>
+            <button type="submit" name="city" value="Paris">Paris</button>
+        </form>
+
+        <div class="weather">
+            {% if weather %}
+                <h2>Weather in {{ weather.city }}</h2>
+                <img src="{{ weather.icon }}" alt="Weather icon">
+                <p>Temperature: {{ weather.temperature }}°{% if unit == "metric" %}C{% else %}F{% endif %}</p>
+                <p>Description: {{ weather.description }}</p>
+                <p>Humidity: {{ weather.humidity }}%</p>
+                <p>Wind Speed: {{ weather.wind_speed }} {% if unit == "metric" %}m/s{% else %}mph{% endif %}</p>
+            {% elif error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

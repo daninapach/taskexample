@@ -1,0 +1,13 @@
+pip install flask requests
+python app.py
+http://127.0.0.1:5000/
+
+
+Step 1: Verify API Key
+Get an API Key: If you haven't already, sign up for a free API key at OpenWeatherMap.
+Replace YOUR_API_KEY in the code with your actual API key:
+python
+Copy code
+API_KEY = "your_actual_api_key"
+
+cc7dca872ec2d82ad44d382a89ccabb8
