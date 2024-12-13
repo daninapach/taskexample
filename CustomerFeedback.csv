@@ -1,0 +1,15 @@
+Feedback,Customer,Date,Type,Importance Type,Function,SLA_Function_Type,Importance Function,Customer_Priority
+The app sometimes crashes when I try to submit a city name. Please fix this bug,Microsoft,1/12/2024,Bug,High,General,7 Days,Medium,High
+"I entered a valid city name, but the app returned an error saying the city was not found",Apple,1/12/2024,Feature,Low,Search,90 Days,Low,Low
+The app doesn't seem to remember my preferred unit (Celsius/Fahrenheit) between sessions,Microsoft,2/12/2024,Bug,High,Sessions,14 Days,Medium,High
+I find it confusing that I have to manually select the unit every time I search for a city's weather,Apple,1/11/2024,Feature,Medium,Client,90 Days,High,Low
+"The weather icon sometimes doesn't load properly, showing a broken image link instead",Papaya,5/12/2024,Bug,High,Client,14 Days,High,Medium
+The error message 'City not found' is not very helpful. It would be better if it suggested possible reasons or solutions,Apple,1/12/2024,Feature,Medium,Search,90 Days,Medium,Low
+The app doesn't provide any instructions on how to use it. A brief guide or tooltip would be helpful,Papaya,4/12/2024,Documents,Low,General,90 Days,Medium,Medium
+"When I enter a city name with a typo, the app doesn't suggest corrections or similar city names",Prodegy,4/12/2024,Feature,Medium,Search,90 Days,Low,Medium
+The app's layout is not responsive on my mobile device. The input fields and buttons are misaligned,Microsoft,4/12/2024,Bug,High,Mobile,14 Days,High,High
+"I tried entering a city name in a different language, but the app didn't recognize it. It would be great if it supported ultiple languages",Microsoft,1/12/2024,Feature,Medium,Search,90 Days,Medium,High
+The app alwayes crashes when I try to submit a city name. Please fix this bug,Apple,1/12/2024,Bug,High,General,7  Days,Medium,Low
+I try t submit city name and the app crashes. Please fix this bug,Microsoft,1/12/2024,Bug,High,General,7  Days,Medium,High
+how can I converte Celsius to Fahrenheit?,Papaya,20/11/2024,Feature,Medium,Converter,30 Days,High,Medium
+Can I choose multiple cities?,Papaya,20/11/2024,Feature,Medium,Cities,30 Days,High,Medium
